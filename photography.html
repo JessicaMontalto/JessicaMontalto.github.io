@@ -284,12 +284,13 @@
     <script src="http://vjs.zencdn.net/4.1/video.js"></script>
     <script src="js/application.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
+    <script src="js/imagesLoaded.pkgd.js"></script>
     <script>
     var container = document.querySelector('#list');
     var msnry;
     // initialize Masonry after all images have loaded
     imagesLoaded( container, function() {
-    msnry = new Masonry( container );
+        msnry = new Masonry( container );
     });
     </script>
   </body>
