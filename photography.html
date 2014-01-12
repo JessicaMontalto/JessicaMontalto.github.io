@@ -48,8 +48,7 @@
 </div>
 
             <div class id="wrapper">
-  <div id="list" class="js-masonry"
-  data-masonry-options='{ "columnWidth": 2, "itemgridSelector": ".itemgrid", "isFitWidth": "true" }'>
+  <div id="list" class="masonry js-masonry"  data-masonry-options='{ "isFitWidth": true }'>
     <div class="itemgrid"><a href="img/Photos/1.jpg" title="photo" data-gallery>
         <img class="gridimage" src="img/Photos/1.preview.jpg" alt="photo">
     </a></div>
@@ -290,7 +289,11 @@
     var msnry;
     // initialize Masonry after all images have loaded
     imagesLoaded( container, function() {
-        msnry = new Masonry( container );
+            msnry = new Masonry( container, {
+            // options
+            columnWidth: 2,
+            itemSelector: '.itemgrid'
+        });
     });
     </script>
   </body>
