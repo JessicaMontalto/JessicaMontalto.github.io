@@ -271,14 +271,12 @@
     <script src="http://vjs.zencdn.net/4.1/video.js"></script>
     <script src="js/application.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/imagesLoaded.pkgd.js"></script>
     <script src="js/jquery.waitforimages.min.js"></script>
     <script>
     // initialize Masonry after all images have loaded
     var container = document.querySelector('#list');
     var msnry;
     $('#list').waitForImages(function() {
-            alert("HI");
             msnry = new Masonry( container, {
                 // options
                 columnWidth: 2,
