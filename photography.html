@@ -272,17 +272,18 @@
     <script src="js/application.js"></script>
     <script src="js/masonry.pkgd.min.js"></script>
     <script src="js/imagesLoaded.pkgd.js"></script>
+    <script src="js/jquery.waitforimages.min.js"></script>
     <script>
-    var container = document.querySelector('#wrapper');
-    var msnry;
     // initialize Masonry after all images have loaded
-    imagesLoaded( container, function() {
-            alert("HI")
+    var container = document.querySelector('#list');
+    var msnry;
+    $('#list').waitForImages(function() {
+            alert("HI");
             msnry = new Masonry( container, {
-            // options
-            columnWidth: 2,
-            itemSelector: '.itemgrid'
-        });
+                // options
+                columnWidth: 2,
+                itemSelector: '.itemgrid'
+            });  
     });
     </script>
   </body>
