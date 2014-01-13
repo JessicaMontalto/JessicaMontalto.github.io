@@ -274,12 +274,17 @@
     <script src="js/imagesLoaded.pkgd.js"></script>
     <script>
     var container = document.querySelector('#list');
-    var msnry = new Masonry( container, {
+    var msnry;
+    // initialize Masonry after all images have loaded
+     alert("HI");
+    imagesLoaded( container, function() {
+            alert("SECOND HI");
+            msnry = new Masonry( container, {
             // options
             columnWidth: 2,
             itemSelector: '.itemgrid'
         });
-    setInterval(function(){msnry.layout();},5000);
+    });
     </script>
   </body>
 </html>
